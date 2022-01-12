@@ -14,7 +14,7 @@ class User(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(250))
     surname = Column(String(250))
-    email = Column(String(60), nullable=False)
+    email = Column(String(60), nullable=False, unique=True)
     password = Column(String(30), nullable = False)
     subscription_date = Column(String(60))
     
@@ -24,7 +24,7 @@ class User(Base):
 class Planet(Base):
     __tablename__ = 'Planet'
     planet_id = Column(Integer, primary_key=True, autoincrement=True)
-    planet_name = Column(String(30))
+    planet_name = Column(String(30), unique=True)
 
 class Character(Base):
     __tablename__ = 'Character'

@@ -38,7 +38,7 @@ class User(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(250))
     surname = Column(String(250))
-    email = Column(String(60), nullable=False)
+    email = Column(String(60), nullable=False, unique=True)
     password = Column(String(30), nullable = False)
     subscription_date = Column(String(60))
 ```
@@ -77,7 +77,7 @@ It just stores each planet individually which its proper `id` and `planet_name`.
 class Planet(Base):
     __tablename__ = 'Planet'
     planet_id = Column(Integer, primary_key=True, autoincrement=True)
-    planet_name = Column(String(30))
+    planet_name = Column(String(30), unique=True)
 ```
 ## 5. `Character`
 As the one before, it stores the chacacter with his name, surname, born planet and the planet actually living in.
@@ -91,6 +91,11 @@ class Character(Base):
     char_planet = Column(Integer, ForeignKey(Planet.planet_id))
     planet_now = Column(String(30))    
 ```
+
+# Diagram
+
+<img src="https://raw.githubusercontent.com/AslanSN/exercise-starwars-data-modeling/task/Tables/diagram.png" alt="Aslan's Table Diagram" width="900">
+
 
 >_That's all folks,_
 >
