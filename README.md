@@ -65,7 +65,7 @@ class User(Base):
 >   __tablename__ = 'Favorite planet'
 >    favPl_id = Column(Integer, primary_key=True, autoincrement=True)
 >    user_favPl_id = Column(Integer, ForeignKey(User.id))
->     fav_planet = Column(Integer, ForeignKey(Planet.planet_id))
+>    fav_planet = Column(Integer, ForeignKey(Planet.planet_id))
 >```
 > As you can observe, in those two you have an `id` for each planet or char faved, and `user_..._id` that connects it with the main planet or char which is stored there.
 >
