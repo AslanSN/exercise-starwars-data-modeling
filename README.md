@@ -94,7 +94,7 @@ class Character(Base):
 
 # Diagram
 
-<img src="https://raw.githubusercontent.com/AslanSN/exercise-starwars-data-modeling/task/Tables/diagram.png" alt="Aslan's Table Diagram" width="900">
+<img src="https://raw.githubusercontent.com/AslanSN/exercise-starwars-data-modeling/master/diagram.png" alt="Aslan's Table Diagram" width="900">
 
 
 >_That's all folks,_
